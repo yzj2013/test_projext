@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    const sum = (function () {
+      //   return function sum(x, y, z) {
+      //     const args = [x, y, z];
+      return function sum(...args) {
+        return args.reduce((a, b) => a + b, 0);
+      };
+    })();
+    console.log(sum(1, 2, 3));
+
+    const arr1 = ["JAN", "FEB", "MAR", "APR", "MAY"];
+    let arr2;
+    (function () {
+      //   arr2 = arr1;
+      //   arr1[0] = "Potato";
+      arr2 = [...arr1];
+      arr1[0] = "Potato";
+    })();
+    console.log(arr2);
+    console.log(arr1);
+  </script>
+</html>

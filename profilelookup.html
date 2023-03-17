@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    var contacts = [
+      {
+        firstName: "Akire",
+        lastName: "Laine",
+        number: "0555552098",
+        likes: ["Pizza", "Coding", "Brownie Points"],
+      },
+      {
+        firstName: "Nire",
+        lastName: "Yne",
+        number: "0555551987",
+        likes: ["Pizza", "Coding", "Brownie Points"],
+      },
+      {
+        firstName: "Sherlock",
+        lastName: "Holmes",
+        number: "0555552098",
+        likes: ["Pizza", "Coding", "Brownie Points"],
+      },
+      {
+        firstName: "Nire",
+        lastName: "Yne",
+        number: "0555551987",
+        likes: ["Pizza", "Coding", "Brownie Points"],
+      },
+    ];
+
+    function lookUpProfile(name, prop) {
+      for (var i = 0; i < contacts.length; i++) {
+        if (contacts[i].firstName === name) {
+          return contacts[i][prop] || "No such property";
+        }
+      }
+
+      return "No such contact";
+    }
+
+    var data = lookUpProfile("Sherlock", "Hello");
+
+    console.log(data);
+  </script>
+</html>

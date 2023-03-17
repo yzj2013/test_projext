@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    function freezeObj() {
+      "use strict";
+      const Math_CONSTANTS = {
+        PI: 3.14,
+      };
+
+      Object.freeze(Math_CONSTANTS);
+
+      try {
+        Math_CONSTANTS.PI = 99;
+      } catch (ex) {
+        console.log(ex);
+      }
+      return Math_CONSTANTS.PI;
+    }
+
+    const PI = freezeObj();
+    console.log(PI);
+  </script>
+</html>
